@@ -41,6 +41,25 @@
     .container {
       padding: 40px;
     }
+
+    /* FILTER BUTTON */
+    .filter {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .filter button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #334155;
+      color: white;
+    }
+    .filter button:hover {
+      background: #38bdf8;
+    }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -54,6 +73,7 @@
     .gallery img:hover {
       transform: scale(1.05);
     }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -77,28 +97,62 @@
 
 <div class="container" id="home">
   <h2>Tentang Saya</h2>
-  <p>Halo! Saya adalah seorang pelajar yang suka menggambar karakter, ilustrasi, dan desain kreatif.</p>
+  <p>Halo! Saya adalah seorang seniman yang suka menggambar karakter, ilustrasi, dan desain kreatif.</p>
 </div>
 
 <div class="container" id="gallery">
   <h2>Gallery</h2>
+
+  <!-- FILTER MENU -->
+  <div class="filter">
+    <button onclick="filterSelection('all')">Semua</button>
+    <button onclick="filterSelection('fanart')">Fanart</button>
+    <button onclick="filterSelection('pemandangan')">Pemandangan</button>
+    <button onclick="filterSelection('perspektif')">Perspektif</button>
+    <button onclick="filterSelection('poster')">Poster</button>
+  </div>
+
   <div class="gallery">
-    <img src="https://via.placeholder.com/300" alt="Gambar 1">
-    <img src="https://via.placeholder.com/300" alt="Gambar 2">
-    <img src="https://via.placeholder.com/300" alt="Gambar 3">
-    <img src="https://via.placeholder.com/300" alt="Gambar 4">
+    <img src="Fanny_Aspirant.png" class="fanart">
+    <img src="Ruby_Aspirant.png" class="fanart">
+    <img src="aspirant_unite .png" class="fanart">
+    <img src="Beatrix.png" class="fanart">
+    <img src="poster_kartini.png" class="poster">
+    <img src="lampumerah.png" class="pemandangan">
+    <img src="depan_smk.png" class="pemandangan">
+    <img src="smk2.png" class="pemandangan">
+    <img src="street.png" class="pemandangan">
+    <img src="https://via.placeholder.com/300" class="perspektif">
+    <img src="https://via.placeholder.com/300" class="fanart">
   </div>
 </div>
 
 <div class="container" id="contact">
   <h2>Kontak</h2>
-  <p>Email: rafaalgazali57@gmail.com</p>
+  <p>Email: emailkamu@example.com</p>
   <p>Instagram: @username_kamu</p>
 </div>
 
 <footer>
   <p>© 2026 Portofolio Saya</p>
 </footer>
+
+<script>
+function filterSelection(category) {
+  const images = document.querySelectorAll('.gallery img');
+  images.forEach(img => {
+    if (category === 'all') {
+      img.style.display = 'block';
+    } else {
+      if (img.classList.contains(category)) {
+        img.style.display = 'block';
+      } else {
+        img.style.display = 'none';
+      }
+    }
+  });
+}
+</script>
 
 </body>
 </html>

@@ -10,10 +10,12 @@
 </head>
 <body>
 
-<header class="hero">
-  <h1>Portofolio BUMN</h1>
-  <p>Berusaha - Untuk - Menggambar - Natural</p>
-</header>
+<div class="hero">
+  <div class="hero-text">
+    <h1>Portofolio BUMN</h1>
+    <p>Berusaha • Untuk • Menggambar • Natural</p>
+  </div>
+</div>
 
 <nav>
   <a href="#gallery">Gallery</a>
@@ -23,51 +25,52 @@
 <section id="gallery" class="container">
   <h2>Gallery</h2>
 
-  <div class="filter">
-    <button onclick="filterSelection('all')">All</button>
-    <button onclick="filterSelection('fanart')">Fanart</button>
-    <button onclick="filterSelection('pemandangan')">Landscape</button>
-    <button onclick="filterSelection('poster')">Poster</button>
-  </div>
+  
+<div class="filter">
+  <button class="active" onclick="filterSelection('all', this)">All</button>
+  <button onclick="filterSelection('fanart', this)">Fanart</button>
+  <button onclick="filterSelection('pemandangan', this)">Landscape</button>
+  <button onclick="filterSelection('poster', this)">Poster</button>
+</div>
 
   <div class="gallery">
 
     <!-- FANART -->
     <div class="card fanart" onclick="openModal(this)">
       <img src="Fanny_Aspirant.png">
-      <div class="overlay"><h3>Fanny Aspirant</h3><p>Fanart MLBB</p></div>
+      <div class="overlay"><h3>Fanny Aspirant</h3><p>Fanart MLBB fanny aspirant dengan artsyle saya sendiri</p></div>
     </div>
 
     <div class="card fanart" onclick="openModal(this)">
       <img src="Ruby_Aspirant.png">
-      <div class="overlay"><h3>Ruby Aspirant</h3><p>Neon style</p></div>
+      <div class="overlay"><h3>Ruby Aspirant</h3><p>Fanart ini saya gambar karna saya sempat sering memainkan hero ini di game MLBB</p></div>
     </div>
 
     <div class="card fanart" onclick="openModal(this)">
       <img src="aspirant_unite .png">
-      <div class="overlay"><h3>Aspirant Unite</h3><p>Fanart team</p></div>
+      <div class="overlay"><h3>Aspirant Unite</h3><p>Fanart MLBB Aspirant Bertema skin mirip anime </p></div>
     </div>
 
     <div class="card fanart" onclick="openModal(this)">
       <img src="Beatrix.png">
-      <div class="overlay"><h3>Beatrix</h3><p>Character art</p></div>
+      <div class="overlay"><h3>Beatrix</h3><p>Fanart MLBB beatrix prime dengan artsyle saya sendiri </p></div>
     </div>
 
     <!-- POSTER -->
     <div class="card poster" onclick="openModal(this)">
       <img src="poster_kartini.png">
-      <div class="overlay"><h3>Poster Kartini</h3><p>Illustration</p></div>
+      <div class="overlay"><h3>Poster Kartini</h3><p>Poster ini saya buat saat saya ikut berpartisipasi di sebuah lomba tingkat kabupaten untuk memperingati hari kartini/p></div>
     </div>
 
     <!-- PEMANDANGAN -->
     <div class="card pemandangan" onclick="openModal(this)">
       <img src="lampumerah.png">
-      <div class="overlay"><h3>Lampu Merah</h3><p>City lighting</p></div>
+      <div class="overlay"><h3>Lampu Merah</h3><p>Ilustarsi tentang Jalanan kota menjelang malam hari</p></div>
     </div>
 
     <div class="card pemandangan" onclick="openModal(this)">
       <img src="depan_smk.png">
-      <div class="overlay"><h3>Depan SMK</h3><p>Environment</p></div>
+      <div class="overlay"><h3>Gerbang sekolahku</h3><p>ilustrasi gambar ini di ambil dari gerbang masuk sekolahku SMKN 2 Bangkalan</p></div>
     </div>
 
     <div class="card pemandangan" onclick="openModal(this)">
@@ -99,7 +102,7 @@
 </section>
 
 <footer>
-  <p>© 2026 Rafa Portfolio</p>
+  <p>© 2026 | Portfolio</p>
 </footer>
 
 <script src="script.js"></script>

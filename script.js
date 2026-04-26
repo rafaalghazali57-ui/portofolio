@@ -1,15 +1,17 @@
-function filterSelection(category) {
+function filterSelection(category, btn) {
   const cards = document.querySelectorAll('.card');
+  const buttons = document.querySelectorAll('.filter button');
 
+  // reset active
+  buttons.forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  // filter gambar
   cards.forEach(card => {
-    if (category === 'all') {
+    if (category === 'all' || card.classList.contains(category)) {
       card.style.display = 'block';
     } else {
-      if (card.classList.contains(category)) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
+      card.style.display = 'none';
     }
   });
 }
